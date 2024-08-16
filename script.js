@@ -64,14 +64,14 @@ const getComment = ()=> {
     .then(response => response.json())
 
     .then(feedback => {
-        feedback.forEach((each, index)  => {
+        feedback.forEach((element, index)  => {
             allComments.innerHTML += `
                 <div>
                 <li>
-                    <h3>${each.id}</h2>?
-                    <h3>${each.name}</h2>?
-                    <h4>${each.email}</h3>?
-                    <p>${each.body}</p>?
+                    <h3>${element.id}</h2>?
+                    <h3>${element.name}</h2>?
+                    <h4>${element.email}</h3>?
+                    <p>${element.body}</p>?
                 </li>
                     </div>
             `
