@@ -72,7 +72,6 @@ const getComment = ()=> {
                     <h4>${element.email}</h3>
                     <p>${element.body}</p>
                 </li>
-                <hr>
                     </div>
             `
         });
