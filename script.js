@@ -68,11 +68,11 @@ const getComment = ()=> {
             allComments.innerHTML += `
                 <div>
                 <li>
-                    <h3>${element.id}</h2>?
-                    <h3>${element.name}</h2>?
-                    <h4>${element.email}</h3>?
-                    <p>${element.body}</p>?
+                    <h3>${element.name}</h2>
+                    <h4>${element.email}</h3>
+                    <p>${element.body}</p>
                 </li>
+                <hr>
                     </div>
             `
         });
