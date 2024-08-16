@@ -22,7 +22,7 @@ const testButton = document.querySelector(".add-btn")
 
 const addItems = () => {
 
-    myItems.innerHTML = "<li>You are the first here!</li>, <li>You are the second here!</li>"
+    myItems.innerHTML = "<li>You are the first here!</li> <li>You are the second here!</li>"
 
 }
 testButton.addEventListener("click", addItems)
@@ -56,13 +56,29 @@ failure.addEventListener("click", checkNoResponse)
 
 
 // Fetch and Display Data
-const getData = ()=> {
+const allComments = document.querySelector(".comments")
+const getComment = ()=> {
 
     fetch("https://jsonplaceholder.typicode.com/comments")
+
     .then(response => response.json())
-    .then(data => console.log(data))
+
+    .then(feedback => {
+        feedback.forEach((each, index)  => {
+            allComments.innerHTML += `
+                <div>
+                <li>
+                    <h3>${each.id}</h2>?
+                    <h3>${each.name}</h2>?
+                    <h4>${each.email}</h3>?
+                    <p>${each.body}</p>?
+                </li>
+                    </div>
+            `
+        });
+    })
 }
-getData()
+getComment()
 
 
 
